@@ -26,12 +26,9 @@ app.use(cors(
     {
         origin: ["https://socio-pedia-bwfkbcbam-legitbunnys-projects.vercel.app"],
         methods: ["GET", "POST"],
-        credentials:true,
     }
 ))
-app.use((req,res)=>{
-    req.setHeader("Access-Control-Allow-Origin", "*");
-})
+
 app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
