@@ -24,7 +24,7 @@ dotenv.config();
 const app = express();
 app.use(cors(
     {
-        origin: ["https://socio-pedia-es7tdni2k-legitbunnys-projects.vercel.app/"],
+        origin: ["https://sociopedia-fe-by-legitbunny.netlify.app/"],
         methods: ["GET", "POST"],
     }
 ))
