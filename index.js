@@ -24,7 +24,7 @@ dotenv.config();
 const app = express();
 app.use(cors(
     {
-        origin: ["https://socio-pedia-c8051i9cn-legitbunnys-projects.vercel.app/"],
+        origin: ["https://socio-pedia-bwfkbcbam-legitbunnys-projects.vercel.app/"],
         methods: ["GET", "POST"],
         credentials:true,
     }
