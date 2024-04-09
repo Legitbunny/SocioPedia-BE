@@ -8,7 +8,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const path = require('path');
 const { fileURLToPath } =  require("url");
-const {register} = require('./controllers/auth.js');
+const {register} = require('./controllers/Auth.js');
 const authRoutes  = require("./routes/auth.js");
 const usersRoutes = require("./routes/users.js");
 const postsRoutes = require("./routes/posts.js");
@@ -44,10 +44,6 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({storage});
-app.get('/',(req,res)=>{
-    res.json("Running");
-});
-
 app.get('/',(req,res)=>{
     res.json("Running");
 });
