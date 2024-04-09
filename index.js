@@ -48,8 +48,6 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({storage});
-app.get('/', (req, res)=>{
-    res.json("success");})
 
 //ROUTES WITH FILES - whenever this route will be hit upload will act as a middlware
 // will upload images to public/assets folder before registering (saving into DB)
