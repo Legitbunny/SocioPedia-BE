@@ -17,17 +17,13 @@ const { createPost } = require('./controllers/Posts.js');
 const User = require('./models/User.js');
 const Post = require('./models/Post.js');
 const {users, posts } = require('./data/index.js');
+const corsOptions = require('./config/corsOptions.js')
 
 // CONFIGURATIONS
 
 dotenv.config();
 const app = express();
-app.use(cors(
-    {
-        origin: ["https://sociopedia-fe.onrender.com/"],
-        methods: ["GET", "POST"],
-    }
-))
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(helmet());
